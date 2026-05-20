@@ -70,7 +70,7 @@ if prompt := st.chat_input("Try to hack me..."):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = client.messages.create(
-                model="claude-3-haiku-20240307", # Fast and responsive for live events
+                model="claude-sonnet-4-20250514",
                 max_tokens=1024,
                 system=SYSTEM_PROMPTS[security_level], # Injects the selected level live
                 messages=st.session_state.messages
